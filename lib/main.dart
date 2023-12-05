@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_case_yunus6116/core/router/app_router.dart';
 import 'package:flutter_case_yunus6116/core/theme/app_themes.dart';
 
+import 'injection_container.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await initializeDependencies();
   runApp(const MyApp());
 }
 

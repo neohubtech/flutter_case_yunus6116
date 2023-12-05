@@ -4,7 +4,7 @@ import 'package:flutter_case_yunus6116/features/movies/domain/entities/movie_res
 
 abstract class MovieRepository {
   // API Methods
-  Future<DataState<List<MovieResponseEntity>>> getAllMovies();
+  Future<DataState<MovieResponseEntity>> getAllMovies();
 
   // Database Methods
   Future<List<MovieEntity>> getSavedMovies();
