@@ -1,8 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_case_yunus6116/core/router/app_router.gr.dart';
+import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_bloc.dart';
+import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_event.dart';
 import 'package:flutter_case_yunus6116/features/movies/presentation/widgets/custom_bottom_navigation_bar.dart';
+import 'package:flutter_case_yunus6116/injection_container.dart';
 
 @RoutePage()
 class MainPage extends StatefulWidget {
@@ -15,18 +19,21 @@ class MainPage extends StatefulWidget {
 class MainPageState extends State<MainPage> {
   @override
   Widget build(context) {
-    return AutoTabsRouter(
-      routes: const [
-        HomeRoute(),
-        SavedMoviesRoute(),
-      ],
-      builder: (context, child) {
-        return Scaffold(
-          backgroundColor: Colors.white,
-          body: child,
-          bottomNavigationBar: buildBottomNav(context, context.tabsRouter),
-        );
-      },
+    return BlocProvider(
+      create: (_) => sl<LocalMoviesBloc>()..add(const GetSavedMovies()),
+      child: AutoTabsRouter(
+        routes: const [
+          HomeRoute(),
+          SavedMoviesRoute(),
+        ],
+        builder: (context, child) {
+          return Scaffold(
+            backgroundColor: Colors.white,
+            body: child,
+            bottomNavigationBar: buildBottomNav(context, context.tabsRouter),
+          );
+        },
+      ),
     );
   }
 

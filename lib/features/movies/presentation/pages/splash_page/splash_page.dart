@@ -4,8 +4,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_case_yunus6116/core/router/app_router.gr.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_bloc.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_event.dart';
 import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/remote/remote_movie_bloc.dart';
 import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/remote/remote_movie_event.dart';
 import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/remote/remote_movie_state.dart';
@@ -30,7 +28,6 @@ class _SplashScreenState extends State<SplashScreen> {
     //FlutterNativeSplash.remove();
     // Add GetMovies event to the bloc
     context.read<RemoteMoviesBloc>().add(const GetAllMovies());
-    context.read<LocalMoviesBloc>().add(const GetSavedMovies());
   }
 
   @override
