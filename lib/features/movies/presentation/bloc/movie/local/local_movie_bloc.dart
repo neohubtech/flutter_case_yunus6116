@@ -5,12 +5,12 @@ import 'package:flutter_case_yunus6116/features/movies/domain/usecases/save_movi
 import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_event.dart';
 import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_state.dart';
 
-class LocalMovieBloc extends Bloc<LocalMoviesEvent, LocalMoviesState> {
+class LocalMoviesBloc extends Bloc<LocalMoviesEvent, LocalMoviesState> {
   final GetSavedMoviesUseCase _getSavedMoviesUseCase;
   final SaveMovieUseCase _saveMovieUseCase;
   final RemoveMovieUseCase _removeMovieUseCase;
 
-  LocalMovieBloc(this._getSavedMoviesUseCase, this._saveMovieUseCase, this._removeMovieUseCase)
+  LocalMoviesBloc(this._getSavedMoviesUseCase, this._saveMovieUseCase, this._removeMovieUseCase)
       : super(const LocalMoviesLoading()) {
     on<GetSavedMovies>(onGetSavedMovies);
     on<RemoveMovie>(onRemoveMovie);

@@ -7,6 +7,8 @@ import 'package:flutter_case_yunus6116/features/movies/domain/usecases/get_all_m
 import 'package:flutter_case_yunus6116/features/movies/domain/usecases/get_saved_movies.dart';
 import 'package:flutter_case_yunus6116/features/movies/domain/usecases/remove_movie.dart';
 import 'package:flutter_case_yunus6116/features/movies/domain/usecases/save_movie.dart';
+import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_bloc.dart';
+import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/remote/remote_movie_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 final sl = GetIt.instance;
@@ -31,4 +33,9 @@ Future<void> initializeDependencies() async {
   sl.registerLazySingleton(() => SaveMovieUseCase(sl()));
 
   sl.registerLazySingleton(() => RemoveMovieUseCase(sl()));
+
+  // Blocs
+  sl.registerFactory(() => RemoteMoviesBloc(sl()));
+
+  sl.registerFactory<LocalMoviesBloc>(() => LocalMoviesBloc(sl(), sl(), sl()));
 }
