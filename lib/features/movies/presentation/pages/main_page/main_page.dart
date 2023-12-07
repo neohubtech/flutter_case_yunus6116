@@ -8,6 +8,7 @@ import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/l
 import 'package:flutter_case_yunus6116/features/movies/presentation/widgets/custom_bottom_navigation_bar.dart';
 import 'package:flutter_case_yunus6116/injection_container.dart';
 
+/// MainPage is the main page of the app.
 @RoutePage()
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

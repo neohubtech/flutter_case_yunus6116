@@ -6,6 +6,7 @@ import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/r
 import 'package:flutter_case_yunus6116/features/movies/presentation/pages/home_page/widgets/banner_slider_widget.dart';
 import 'package:flutter_case_yunus6116/features/movies/presentation/pages/home_page/widgets/movie_list_widget.dart';
 
+/// HomePage is the home page of the app.
 @RoutePage()
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

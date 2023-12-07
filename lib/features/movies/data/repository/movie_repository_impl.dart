@@ -9,6 +9,7 @@ import 'package:flutter_case_yunus6116/features/movies/data/models/movie_respons
 import 'package:flutter_case_yunus6116/features/movies/domain/entities/movie.dart';
 import 'package:flutter_case_yunus6116/features/movies/domain/repository/movie_repository.dart';
 
+/// MovieRepositoryImpl is the implementation of the [MovieRepository] interface.
 class MovieRepositoryImpl implements MovieRepository {
   final MovieApiService _movieApiService;
   final AppDatabase _appDatabase;

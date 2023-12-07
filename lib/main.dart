@@ -8,12 +8,14 @@ import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/r
 
 import 'injection_container.dart';
 
+/// main is the entry point of the app.
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initializeDependencies();
   runApp(const MyApp());
 }
 
+/// MyApp is the main widget of the app.
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 

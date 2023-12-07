@@ -11,8 +11,10 @@ import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/l
 import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/remote/remote_movie_bloc.dart';
 import 'package:get_it/get_it.dart';
 
+/// sl is the service locator that is responsible for initializing the dependencies.
 final sl = GetIt.instance;
 
+/// initializeDependencies is the function that is responsible for initializing the dependencies.
 Future<void> initializeDependencies() async {
   final database = await $FloorAppDatabase.databaseBuilder('app_database.db').build();
   sl.registerSingleton<AppDatabase>(database);

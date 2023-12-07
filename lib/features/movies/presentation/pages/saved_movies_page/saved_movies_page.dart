@@ -11,6 +11,7 @@ import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/l
 import 'package:flutter_case_yunus6116/injection_container.dart';
 import 'package:lottie/lottie.dart';
 
+/// SavedMoviesPage is the page that is shown when the user clicks the shopping cart icon in the bottom navigation bar.
 @RoutePage()
 class SavedMoviesPage extends StatelessWidget {
   const SavedMoviesPage({

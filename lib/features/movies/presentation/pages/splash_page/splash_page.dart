@@ -57,9 +57,9 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               Center(
                 child: Icon(
-                  Icons.home,
+                  Icons.movie,
                   size: 100,
-                  color: Colors.red,
+                  color: Colors.black,
                 ),
               ),
             ],

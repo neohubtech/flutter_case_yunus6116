@@ -29,7 +29,7 @@ class BannerSliderWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(24.0),
               border: Border.all(
                 color: Colors.black.withOpacity(0.6),
-                width: 4,
+                width: 2,
               ),
             ),
             child: CachedNetworkImage(

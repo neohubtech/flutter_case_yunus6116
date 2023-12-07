@@ -9,6 +9,7 @@ import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/l
 
 import 'package:flutter_hooks/flutter_hooks.dart';
 
+/// SavedMoviesPage is the page that is shown when the user clicks the shopping cart icon in the bottom navigation bar.
 class MovieListWidget extends StatelessWidget {
   const MovieListWidget({
     super.key,
@@ -79,6 +80,7 @@ class MovieListWidget extends StatelessWidget {
   }
 }
 
+/// MovieItemListTile is the widget that is used to show each movie item in the list.
 class MovieItemListTile extends HookWidget {
   const MovieItemListTile({
     super.key,
