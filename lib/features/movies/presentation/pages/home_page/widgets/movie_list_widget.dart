@@ -1,5 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_case_yunus6116/core/theme/text_styles.dart';
 import 'package:flutter_case_yunus6116/features/movies/domain/entities/movie.dart';
 import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_bloc.dart';
 import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_event.dart';
@@ -25,28 +27,26 @@ class MovieListWidget extends StatelessWidget {
             return state.movies!.contains(movie);
           }
 
-          return Expanded(
-            child: ListView.builder(
-              itemCount: movieList.length,
-              itemBuilder: (context, index) {
-                return Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 24),
-                  margin: const EdgeInsets.only(top: 24),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      // Category Name for each unique category
-                      _buildCategoryName(movieList, index),
-                      const SizedBox(height: 12),
-                      MovieItemListTile(
-                        movie: movieList[index],
-                        isMovieSaved: isMovieSaved(movieList[index]),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
+          return ListView.builder(
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: movieList.length,
+            itemBuilder: (context, index) {
+              return Container(
+                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Category Name for each unique category
+                    _buildCategoryName(movieList, index),
+                    MovieItemListTile(
+                      movie: movieList[index],
+                      isMovieSaved: isMovieSaved(movieList[index]),
+                    ),
+                  ],
+                ),
+              );
+            },
           );
         } else {
           return const Center(child: Text("Unknown Error"));
@@ -63,13 +63,18 @@ class MovieListWidget extends StatelessWidget {
     }
   }
 
-  Text _buildCategory(List<MovieEntity> movieList, int index) {
-    return Text(
-      movieList[index].type!,
-      style: const TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.w600,
-      ),
+  Column _buildCategory(List<MovieEntity> movieList, int index) {
+    return Column(
+      children: [
+        Text(
+          movieList[index].type!,
+          style: const TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        const SizedBox(height: 12),
+      ],
     );
   }
 }
@@ -88,40 +93,53 @@ class MovieItemListTile extends HookWidget {
   Widget build(BuildContext context) {
     return ListTile(
       contentPadding: EdgeInsets.zero,
-      leading: Image.network(
-        movie.imageUrl!,
-        width: 50,
-        height: 50,
+      leading: CircleAvatar(
+        radius: 32,
+        backgroundImage: CachedNetworkImageProvider(
+          movie.imageUrl!,
+        ),
       ),
-      title: Text(movie.name!),
-      subtitle: Text(movie.explanation!),
-      trailing: Container(
-        width: 30.0,
-        height: 30.0,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          border: Border.all(
-            color: Colors.black,
-            width: 2.0,
+      title: Text(
+        movie.name!,
+        style: AppTextStyles.heading2.copyWith(
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+      subtitle: Text(
+        movie.explanation!,
+        style: AppTextStyles.heading5.copyWith(
+          fontWeight: FontWeight.w500,
+        ),
+      ),
+      trailing: InkWell(
+        onTap: () {
+          if (isMovieSaved) {
+            context.read<LocalMoviesBloc>().add(RemoveMovie(movie));
+          } else {
+            context.read<LocalMoviesBloc>().add(SaveMovie(movie));
+          }
+        },
+        child: Container(
+          width: 30.0,
+          height: 30.0,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: Border.all(
+              color: Colors.black,
+              width: 2.0,
+            ),
+          ),
+          child: Center(
+            child: isMovieSaved
+                ? const Icon(
+                    Icons.check,
+                    size: 20.0,
+                    color: Colors.green,
+                  )
+                : null,
           ),
         ),
-        child: Center(
-          child: isMovieSaved
-              ? const Icon(
-                  Icons.check,
-                  size: 20.0,
-                  color: Colors.green,
-                )
-              : null,
-        ),
       ),
-      onTap: () {
-        if (isMovieSaved) {
-          context.read<LocalMoviesBloc>().add(RemoveMovie(movie));
-        } else {
-          context.read<LocalMoviesBloc>().add(SaveMovie(movie));
-        }
-      },
     );
   }
 }

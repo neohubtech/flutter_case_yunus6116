@@ -39,9 +39,11 @@ class CustomBottomNavigationBar extends StatelessWidget {
                         }
                         if (index == 1) {
                           // ignore: use_build_context_synchronously
+
                           showModalBottomSheet(
                             //isScrollControlled: true,
                             context: context,
+                            useRootNavigator: true,
                             builder: (BuildContext context) {
                               return const SavedMoviesPage();
                             },
@@ -83,7 +85,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
               ),
             ],
           ),
-          // add vertical divider to the center
         ],
       ),
     );
@@ -121,7 +122,6 @@ class SavedMovieMarker extends StatelessWidget {
         if (state is LocalMoviesLoading) {
           return const SizedBox.shrink();
         } else if (state is LocalMoviesDone) {
-          debugPrint(state.movies!.length.toString());
           return Positioned(
             top: -5,
             right: -5,

@@ -38,8 +38,6 @@ class _SplashScreenState extends State<SplashScreen> {
           listener: (context, state) {
             /// If the state is RemoteMoviesDone, then navigate to the MainRoute
             if (state is RemoteMoviesDone) {
-              debugPrint(
-                  state.allMovies != null ? state.allMovies!.bannerList!.length.toString() : "Some error occured!");
               context.router.pushAndPopUntil(const MainRoute(), predicate: (_) => false);
             }
 

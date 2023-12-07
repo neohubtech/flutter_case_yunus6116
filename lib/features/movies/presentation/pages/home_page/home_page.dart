@@ -39,13 +39,16 @@ class HomePage extends StatelessWidget {
   Widget _buildBody(BuildContext context) {
     return BlocBuilder<RemoteMoviesBloc, RemoteMoviesState>(
       builder: (context, state) {
-        return Column(
-          children: [
-            // BannerSlider is used to show the banners of the movies
-            BannerSliderWidget(bannerList: state.allMovies!.bannerList!),
-            // Categorized All Movies List
-            MovieListWidget(movieList: state.allMovies!.movieList!),
-          ],
+        return SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // BannerSlider is used to show the banners of the movies
+              BannerSliderWidget(bannerList: state.allMovies!.bannerList!),
+              // Categorized All Movies List
+              MovieListWidget(movieList: state.allMovies!.movieList!),
+            ],
+          ),
         );
       },
     );
