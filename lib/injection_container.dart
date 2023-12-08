@@ -37,7 +37,7 @@ Future<void> initializeDependencies() async {
   sl.registerLazySingleton(() => RemoveMovieUseCase(sl()));
 
   // Blocs
-  sl.registerFactory(() => RemoteMoviesBloc(sl()));
+  sl.registerFactory<RemoteMoviesBloc>(() => RemoteMoviesBloc(sl()));
 
   sl.registerFactory<LocalMoviesBloc>(() => LocalMoviesBloc(sl(), sl(), sl()));
 }
