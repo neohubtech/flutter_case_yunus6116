@@ -5,12 +5,14 @@ import 'package:flutter_case_yunus6116/features/movies/data/models/movie.dart';
 import 'package:flutter_case_yunus6116/features/movies/data/repository/movie_repository_impl.dart';
 import 'package:flutter_case_yunus6116/features/movies/domain/entities/movie.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
 class MockMovieDao extends Mock implements MovieDao {}
 
 class MockMovieApiService extends Mock implements MovieApiService {}
 
+@GenerateMocks(<Type>[MockMovieDao, MockMovieApiService])
 class MockAppDatabase extends Mock implements AppDatabase {
   @override
   MovieDao get movieDao => MockMovieDao();
