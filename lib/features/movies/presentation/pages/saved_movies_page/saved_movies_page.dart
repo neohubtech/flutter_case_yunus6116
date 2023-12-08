@@ -2,13 +2,13 @@ import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_case_yunus6116/core/extensions/context_extensions.dart';
-import 'package:flutter_case_yunus6116/core/theme/text_styles.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/entities/movie.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_bloc.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_event.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_state.dart';
-import 'package:flutter_case_yunus6116/injection_container.dart';
+import '../../../../../core/extensions/context_extensions.dart';
+import '../../../../../core/theme/text_styles.dart';
+import '../../../domain/entities/movie.dart';
+import '../../bloc/movie/local/local_movie_bloc.dart';
+import '../../bloc/movie/local/local_movie_event.dart';
+import '../../bloc/movie/local/local_movie_state.dart';
+import '../../../../../injection_container.dart';
 import 'package:lottie/lottie.dart';
 
 /// SavedMoviesPage is the page that is shown when the user clicks the shopping cart icon in the bottom navigation bar.

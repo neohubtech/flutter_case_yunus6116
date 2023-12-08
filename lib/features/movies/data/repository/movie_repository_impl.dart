@@ -1,13 +1,13 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:flutter_case_yunus6116/core/resources/data_state.dart';
-import 'package:flutter_case_yunus6116/features/movies/data/data_sources/local/app_database.dart';
-import 'package:flutter_case_yunus6116/features/movies/data/data_sources/remote/movies_api_service.dart';
-import 'package:flutter_case_yunus6116/features/movies/data/models/movie.dart';
-import 'package:flutter_case_yunus6116/features/movies/data/models/movie_response.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/entities/movie.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/repository/movie_repository.dart';
+import '../../../../core/resources/data_state.dart';
+import '../data_sources/local/app_database.dart';
+import '../data_sources/remote/movies_api_service.dart';
+import '../models/movie.dart';
+import '../models/movie_response.dart';
+import '../../domain/entities/movie.dart';
+import '../../domain/repository/movie_repository.dart';
 
 /// MovieRepositoryImpl is the implementation of the [MovieRepository] interface.
 class MovieRepositoryImpl implements MovieRepository {

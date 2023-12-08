@@ -1,11 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_case_yunus6116/core/theme/text_styles.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/entities/movie.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_bloc.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_event.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_state.dart';
+import '../../../../../../core/theme/text_styles.dart';
+import '../../../../domain/entities/movie.dart';
+import '../../../bloc/movie/local/local_movie_bloc.dart';
+import '../../../bloc/movie/local/local_movie_event.dart';
+import '../../../bloc/movie/local/local_movie_state.dart';
 
 import 'package:flutter_hooks/flutter_hooks.dart';
 

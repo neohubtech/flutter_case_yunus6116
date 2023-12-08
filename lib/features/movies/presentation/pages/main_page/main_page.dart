@@ -2,11 +2,11 @@ import 'package:auto_route/auto_route.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_case_yunus6116/core/router/app_router.gr.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_bloc.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_event.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/widgets/custom_bottom_navigation_bar.dart';
-import 'package:flutter_case_yunus6116/injection_container.dart';
+import '../../../../../core/router/app_router.gr.dart';
+import '../../bloc/movie/local/local_movie_bloc.dart';
+import '../../bloc/movie/local/local_movie_event.dart';
+import '../../widgets/custom_bottom_navigation_bar.dart';
+import '../../../../../injection_container.dart';
 
 /// MainPage is the main page of the app.
 @RoutePage()

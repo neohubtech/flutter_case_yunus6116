@@ -1,12 +1,12 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter_case_yunus6116/core/extensions/context_extensions.dart';
+import '../../../../core/extensions/context_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_case_yunus6116/core/theme/colors.dart';
-import 'package:flutter_case_yunus6116/core/theme/text_styles.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/pages/saved_movies_page/saved_movies_page.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/widgets/custom_bottom_bar_painter.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/widgets/saved_movie_market.dart';
+import '../../../../core/theme/colors.dart';
+import '../../../../core/theme/text_styles.dart';
+import '../pages/saved_movies_page/saved_movies_page.dart';
+import 'custom_bottom_bar_painter.dart';
+import 'saved_movie_market.dart';
 
 /// CustomBottomNavigationBar is the bottom navigation bar that is shown in the MainPage.
 class CustomBottomNavigationBar extends StatelessWidget {

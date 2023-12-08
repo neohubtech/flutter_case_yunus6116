@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_bloc.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_state.dart';
+import '../bloc/movie/local/local_movie_bloc.dart';
+import '../bloc/movie/local/local_movie_state.dart';
 
 /// SavedMovieMarker is a widget that shows the number of saved movies.
 class SavedMovieMarker extends StatefulWidget {

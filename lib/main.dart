@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_case_yunus6116/core/router/app_router.dart';
-import 'package:flutter_case_yunus6116/core/theme/app_themes.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_bloc.dart';
+import 'core/router/app_router.dart';
+import 'core/theme/app_themes.dart';
+import 'features/movies/presentation/bloc/movie/local/local_movie_bloc.dart';
 
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/remote/remote_movie_bloc.dart';
+import 'features/movies/presentation/bloc/movie/remote/remote_movie_bloc.dart';
 
 import 'injection_container.dart';
 

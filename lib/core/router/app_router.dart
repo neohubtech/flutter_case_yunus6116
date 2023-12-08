@@ -3,6 +3,7 @@ import 'package:auto_route/auto_route.dart';
 
 import 'app_router.gr.dart';
 
+/// AppRouter is the class that is responsible for the routing.
 @AutoRouterConfig()
 class AppRouter extends $AppRouter {
   @override

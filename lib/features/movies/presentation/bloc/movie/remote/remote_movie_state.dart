@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/entities/movie_response.dart';
+import '../../../../domain/entities/movie_response.dart';
 
 /// RemoteMoviesEvent is the event class for the RemoteMoviesBloc.
 abstract class RemoteMoviesState extends Equatable {

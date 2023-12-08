@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/entities/movie.dart';
+import '../../../../domain/entities/movie.dart';
 
 /// LocalMoviesEvent is the event class for the LocalMoviesBloc.
 abstract class LocalMoviesState extends Equatable {

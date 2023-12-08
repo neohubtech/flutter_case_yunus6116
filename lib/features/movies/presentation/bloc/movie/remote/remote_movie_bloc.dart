@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_case_yunus6116/core/resources/data_state.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/usecases/get_all_movies.dart';
+import '../../../../../../core/resources/data_state.dart';
+import '../../../../domain/usecases/get_all_movies.dart';
 
 import 'remote_movie_event.dart';
 import 'remote_movie_state.dart';

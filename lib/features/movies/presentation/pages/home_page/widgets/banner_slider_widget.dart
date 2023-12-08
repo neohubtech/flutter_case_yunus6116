@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_case_yunus6116/core/extensions/context_extensions.dart';
+import '../../../../../../core/extensions/context_extensions.dart';
 
-import 'package:flutter_case_yunus6116/features/movies/domain/entities/banner.dart';
+import '../../../../domain/entities/banner.dart';
 
 class BannerSliderWidget extends StatelessWidget {
   const BannerSliderWidget({

@@ -1,6 +1,6 @@
 import 'package:floor/floor.dart';
-import 'package:flutter_case_yunus6116/core/constants/constants.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/entities/movie.dart';
+import '../../../../core/constants/constants.dart';
+import '../../domain/entities/movie.dart';
 
 /// Movie Model
 @Entity(tableName: 'movies', primaryKeys: ["name"])

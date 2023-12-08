@@ -1,5 +1,5 @@
-import 'package:flutter_case_yunus6116/core/constants/constants.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/entities/banner.dart';
+import '../../../../core/constants/constants.dart';
+import '../../domain/entities/banner.dart';
 
 /// Banner Model for Banner List
 class BannerModel extends BannerEntity {

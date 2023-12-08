@@ -1,5 +1,5 @@
 import 'package:floor/floor.dart';
-import 'package:flutter_case_yunus6116/features/movies/data/models/movie.dart';
+import '../../../models/movie.dart';
 
 /// Movie Dao (Data Access Object)
 @dao

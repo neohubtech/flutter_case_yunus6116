@@ -1,6 +1,6 @@
-import 'package:flutter_case_yunus6116/core/resources/data_state.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/entities/movie.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/entities/movie_response.dart';
+import '../../../../core/resources/data_state.dart';
+import '../entities/movie.dart';
+import '../entities/movie_response.dart';
 
 abstract class MovieRepository {
   // API Methods

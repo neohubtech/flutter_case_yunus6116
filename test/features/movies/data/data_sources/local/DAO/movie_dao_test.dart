@@ -13,7 +13,7 @@ class MockMovieApiService extends Mock implements MovieApiService {}
 
 class MockAppDatabase extends Mock implements AppDatabase {
   @override
-  MovieDao get movieDao => MockMovieDao(); // MockMovieDao kullanarak gerçek bir MovieDao nesnesi sağlıyoruz.
+  MovieDao get movieDao => MockMovieDao();
 }
 
 void main() {
@@ -92,7 +92,5 @@ void main() {
       verify(mockMovieDao.insertMovie(MovieModel.fromEntity(movieToSave))).called(1);
       verifyNoMoreInteractions(mockMovieDao);
     });
-
-    // Diğer test senaryolarını buraya ekleyebilirsiniz.
   });
 }

@@ -1,7 +1,7 @@
-import 'package:flutter_case_yunus6116/core/resources/data_state.dart';
-import 'package:flutter_case_yunus6116/core/usecase/usecase.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/entities/movie_response.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/repository/movie_repository.dart';
+import '../../../../core/resources/data_state.dart';
+import '../../../../core/usecase/usecase.dart';
+import '../entities/movie_response.dart';
+import '../repository/movie_repository.dart';
 
 /// GetAllMoviesUseCase is the use case that is responsible for getting all movies.
 class GetAllMoviesUseCase implements UseCase<DataState<MovieResponseEntity>, void> {

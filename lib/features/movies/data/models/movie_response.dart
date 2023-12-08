@@ -1,4 +1,4 @@
-import 'package:flutter_case_yunus6116/features/movies/domain/entities/movie_response.dart';
+import '../../domain/entities/movie_response.dart';
 
 import 'banner.dart';
 import 'movie.dart';

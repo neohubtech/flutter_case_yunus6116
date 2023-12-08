@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/remote/remote_movie_bloc.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/remote/remote_movie_state.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/pages/home_page/widgets/banner_slider_widget.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/pages/home_page/widgets/movie_list_widget.dart';
+import '../../bloc/movie/remote/remote_movie_bloc.dart';
+import '../../bloc/movie/remote/remote_movie_state.dart';
+import 'widgets/banner_slider_widget.dart';
+import 'widgets/movie_list_widget.dart';
 
 /// HomePage is the home page of the app.
 @RoutePage()

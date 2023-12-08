@@ -1,9 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/usecases/get_saved_movies.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/usecases/remove_movie.dart';
-import 'package:flutter_case_yunus6116/features/movies/domain/usecases/save_movie.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_event.dart';
-import 'package:flutter_case_yunus6116/features/movies/presentation/bloc/movie/local/local_movie_state.dart';
+import '../../../../domain/usecases/get_saved_movies.dart';
+import '../../../../domain/usecases/remove_movie.dart';
+import '../../../../domain/usecases/save_movie.dart';
+import 'local_movie_event.dart';
+import 'local_movie_state.dart';
 
 /// LocalMoviesBloc is the bloc that is responsible for the local movies.
 class LocalMoviesBloc extends Bloc<LocalMoviesEvent, LocalMoviesState> {

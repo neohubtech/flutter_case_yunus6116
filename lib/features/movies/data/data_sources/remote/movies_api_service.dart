@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_case_yunus6116/features/movies/data/models/movie_response.dart';
+import '../../models/movie_response.dart';
 import 'package:retrofit/dio.dart';
 import 'package:retrofit/http.dart';
 
