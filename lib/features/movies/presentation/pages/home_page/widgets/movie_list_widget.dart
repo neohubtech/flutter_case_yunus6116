@@ -114,6 +114,7 @@ class MovieItemListTile extends HookWidget {
         ),
       ),
       trailing: InkWell(
+        customBorder: const CircleBorder(),
         onTap: () {
           if (isMovieSaved) {
             context.read<LocalMoviesBloc>().add(RemoveMovie(movie));
